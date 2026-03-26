@@ -1121,3 +1121,16 @@ class SecureLlmService(
 > **Consejo practico**: empieza siempre con el modelo mas barato (GPT-4o-mini o Claude Haiku)
 > y sube de modelo solo si la calidad no es suficiente. En produccion, la diferencia de coste
 > entre GPT-4o-mini y GPT-4o puede ser de 10x-20x, y para muchas tareas la calidad es comparable.
+
+---
+
+## Track Python
+
+Este nivel tiene un track alternativo en Python. Si vienes del ecosistema Python o quieres dominar ambos lenguajes, consulta el [README Python](README-python.md) que cubre los mismos conceptos con OpenAI SDK, Anthropic SDK y LangChain.
+
+| # | Ejercicio | Descripcion | Conceptos clave |
+|---|-----------|-------------|-----------------|
+| 05 | [OpenAI SDK en Python](ejercicio-05-python-openai-sdk/) | Llamadas a GPT con el SDK oficial de Python | openai, ChatCompletion, streaming, async |
+| 06 | [Prompt engineering en Python](ejercicio-06-python-prompt-engineering/) | Tecnicas de prompting con LangChain | ChatOpenAI, PromptTemplate, few-shot |
+| 07 | [Embeddings en Python](ejercicio-07-python-embeddings/) | Generar y comparar embeddings con openai y numpy | openai.embeddings, cosine_similarity, numpy |
+| 08 | [Costes y streaming en Python](ejercicio-08-python-costes-streaming/) | Controlar costes con tiktoken y respuestas streaming | tiktoken, streaming, token counting |

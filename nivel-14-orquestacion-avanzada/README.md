@@ -1142,3 +1142,24 @@ Haz los ejercicios en orden. Cada uno construye sobre los conceptos del anterior
 - [RAGAS: Evaluation Framework for RAG](https://docs.ragas.io/)
 - [DeepEval: LLM Evaluation Framework](https://docs.confident-ai.com/)
 - [Testcontainers for Java](https://testcontainers.com/guides/getting-started-with-testcontainers-for-java/)
+
+---
+
+## Track Python
+
+El track Python de este nivel cubre orquestacion avanzada usando el ecosistema Python:
+LCEL (LangChain Expression Language) con pipes y Runnables, LangGraph para workflows
+complejos con `StateGraph`, structured outputs con `with_structured_output` y Pydantic,
+orquestacion multi-agente, LangSmith para tracing, evaluacion con LLM-as-judge,
+testing con pytest y caching semantico.
+
+Consulta el archivo [README-python.md](README-python.md) para la teoria completa con ejemplos de codigo.
+
+### Ejercicios Python
+
+| # | Ejercicio | Descripcion | Conceptos clave |
+|---|-----------|-------------|-----------------|
+| 05 | [LangChain Chains](ejercicio-05-python-langchain-chains/) | Construir chains con LCEL: chain RAG con `RunnablePassthrough`, router con `RunnableBranch` y analisis paralelo con `RunnableParallel` | LCEL, `RunnablePassthrough`, `RunnableLambda`, `RunnableParallel`, `RunnableBranch` |
+| 06 | [LangGraph](ejercicio-06-python-langgraph/) | Implementar un workflow de soporte con `StateGraph`: clasificacion, routing condicional, resolucion automatica y escalacion | `StateGraph`, nodos, edges condicionales, `MemorySaver`, ciclos |
+| 07 | [Structured Outputs](ejercicio-07-python-structured-outputs/) | Extraer datos estructurados con `with_structured_output`. Validar con Pydantic y manejar errores | `with_structured_output`, Pydantic models, `field_validator`, enums |
+| 08 | [Evaluacion y Testing](ejercicio-08-python-eval-testing/) | Tests con pytest: mocks del LLM, snapshot testing y LLM-as-judge. Crear dataset de evaluacion y evaluar con metricas | `pytest`, `MagicMock`, snapshot testing, `@pytest.mark.slow`, LLM-as-judge |

@@ -999,3 +999,21 @@ spring:
 > **Consejo practico**: empieza siempre con pgvector. Si ya tienes PostgreSQL en tu stack,
 > no necesitas infraestructura adicional. Solo migra a una BD vectorial dedicada cuando
 > pgvector se quede corto (decenas de millones de vectores o requisitos de latencia extremos).
+
+---
+
+## Track Python
+
+El contenido completo del track Python para este nivel esta en [README-python.md](./README-python.md).
+Cubre los mismos conceptos de bases de datos vectoriales usando el ecosistema Python:
+psycopg2/asyncpg con pgvector, Qdrant client, Pinecone SDK, numpy/scipy para similitud
+manual, y LangChain VectorStore como capa de abstraccion.
+
+### Ejercicios Track Python
+
+| # | Ejercicio | Descripcion | Conceptos clave |
+|---|-----------|-------------|-----------------|
+| 05 | **pgvector desde Python** | Configurar pgvector con Docker, conectar con psycopg2, crear tabla con columna vector, insertar 1000 documentos con embeddings generados por OpenAI, y buscar por similitud. Comparar resultados con y sin indice HNSW | psycopg2, pgvector, register_vector, HNSW, batch insert, benchmark |
+| 06 | **Qdrant desde Python** | Levantar Qdrant con Docker, usar qdrant_client para crear coleccion, insertar documentos con payload, buscar con filtros por metadatos. Comparar latencia y facilidad con pgvector | qdrant_client, PointStruct, Filter, FieldCondition, payload |
+| 07 | **Similitud manual con numpy** | Implementar cosine, euclidiana y dot product con numpy. Buscar los 10 documentos mas similares en un corpus de 50K vectores en memoria con scipy cdist. Comparar metricas | numpy, scipy.spatial.distance, cdist, cosine_similarity, benchmark |
+| 08 | **Busqueda hibrida con LangChain** | Usar LangChain PGVector para ingestar 200 documentos, implementar busqueda hibrida combinando similarity_search con full-text search de PostgreSQL. Evaluar precision vs busqueda vectorial pura | LangChain, PGVector, full-text search, Reciprocal Rank Fusion |

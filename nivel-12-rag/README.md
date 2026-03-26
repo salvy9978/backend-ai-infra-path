@@ -1149,3 +1149,21 @@ Soluciones:
 > evaluacion. Solo anade complejidad (chunking semantico, busqueda hibrida, re-ranking)
 > cuando las metricas lo justifiquen. La mayoria de mejoras en RAG vienen de mejorar la
 > calidad de los documentos de entrada, no del algoritmo de retrieval.
+
+---
+
+## Track Python
+
+El contenido completo del track Python para este nivel esta en [README-python.md](./README-python.md).
+Cubre los mismos conceptos de RAG usando el ecosistema Python: LangChain como framework
+principal, LlamaIndex como alternativa, document loaders especializados, chunking avanzado,
+multiples estrategias de retrieval, evaluacion con RAGAS, y FastAPI para servir el pipeline.
+
+### Ejercicios Track Python
+
+| # | Ejercicio | Descripcion | Conceptos clave |
+|---|-----------|-------------|-----------------|
+| 05 | **LangChain RAG basico** | Construir un pipeline RAG completo con LangChain: cargar 10 PDFs con PyPDFLoader, chunk con RecursiveCharacterTextSplitter, almacenar en FAISS, y consultar con RetrievalQA. Comparar chain_type "stuff" vs "map_reduce" | LangChain, PyPDFLoader, FAISS, RetrievalQA, LCEL |
+| 06 | **LlamaIndex RAG** | Construir el mismo pipeline con LlamaIndex: SimpleDirectoryReader, VectorStoreIndex con pgvector, query_engine y chat_engine. Comparar lineas de codigo y resultados con LangChain | LlamaIndex, SimpleDirectoryReader, VectorStoreIndex, pgvector |
+| 07 | **Chunking avanzado** | Comparar cuatro estrategias de chunking (fijo, recursivo, markdown, semantico) sobre un corpus de documentacion tecnica. Medir con RAGAS cual estrategia da mejores resultados de retrieval | RecursiveCharacterTextSplitter, SemanticChunker, MarkdownSplitter, RAGAS |
+| 08 | **Evaluacion con RAGAS** | Crear un dataset de 30 preguntas con respuestas esperadas, evaluar un pipeline RAG con las 4 metricas de RAGAS, iterar cambiando chunk_size, top_k, y search_type hasta maximizar faithfulness y context_precision | RAGAS, evaluate, Faithfulness, Context Precision, tuning |

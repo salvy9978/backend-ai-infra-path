@@ -1072,3 +1072,23 @@ data class DocResponse(val documentos: List<String>, val encontrados: Int)
 > validas que el agente las usa correctamente. Cada herramienta adicional aumenta la
 > probabilidad de que el agente se equivoque al elegir cual usar. Y siempre: guardrails
 > primero, funcionalidad despues.
+
+---
+
+## Track Python
+
+El track Python de este nivel cubre agentes y herramientas usando el ecosistema Python:
+LangChain Tools (`@tool`, `StructuredTool`, `BaseTool`), OpenAI function calling nativo,
+agentes ReAct con `AgentExecutor`, sistemas multi-agente con CrewAI y LangGraph, memoria
+de agentes (`ConversationBufferMemory`, `ConversationSummaryMemory`) y guardrails con Pydantic.
+
+Consulta el archivo [README-python.md](README-python.md) para la teoria completa con ejemplos de codigo.
+
+### Ejercicios Python
+
+| # | Ejercicio | Descripcion | Conceptos clave |
+|---|-----------|-------------|-----------------|
+| 05 | [LangChain Tools](ejercicio-05-python-langchain-tools/) | Crear herramientas con `@tool`, `StructuredTool` y `BaseTool`. Vincular al modelo con `bind_tools` y probar que el LLM elige la herramienta correcta | `@tool`, `StructuredTool`, `BaseTool`, `bind_tools`, Pydantic schemas |
+| 06 | [ReAct Agent](ejercicio-06-python-react-agent/) | Construir un agente ReAct con `AgentExecutor` que combine multiples herramientas. Probar con preguntas multi-paso | `create_react_agent`, `AgentExecutor`, `max_iterations`, multi-step reasoning |
+| 07 | [CrewAI](ejercicio-07-python-crewai/) | Crear un crew de 3 agentes que colaboren para generar un informe. Probar con proceso secuencial y jerarquico | `Agent`, `Task`, `Crew`, `Process.sequential`, `Process.hierarchical` |
+| 08 | [Agent Memory](ejercicio-08-python-agent-memory/) | Anadir memoria a un agente: `ConversationBufferMemory` y `ConversationSummaryMemory`. Persistencia con LangGraph `MemorySaver` | `ConversationBufferMemory`, `ConversationSummaryMemory`, `MemorySaver`, `thread_id` |
